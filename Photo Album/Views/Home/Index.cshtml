@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Photo_Album.Models.PlaceCollectionItem>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="page-title">
+    <PageTitle>Photo Album 🌄</PageTitle>
+</div>
+<div class="place-columns">
+    @foreach (var item in Model)
+    {
+        @Html.Partial("_PlaceCard", item)
+        ;
+    }
+</div>
